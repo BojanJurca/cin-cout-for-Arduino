@@ -91,6 +91,11 @@
                 return *this;
             }
 
+            template<size_t N>
+            ostream& operator << (const char (&value) [N]) {
+                return *this << static_cast<const char *> (value);
+            }
+
             template<typename T>
             ostream& operator << (const T& value) {
                 Serial.print (value);            
