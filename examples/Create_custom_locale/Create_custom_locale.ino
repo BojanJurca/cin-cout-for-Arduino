@@ -1,5 +1,6 @@
 #include <locale.hpp>
-#include <console.hpp>
+// #include <istream.hpp>
+#include <ostream.hpp>
 
 
 /*
@@ -19,7 +20,6 @@
         a b c č ć d đ e f g h i j k l m n o p q r s š t u v w x y z ž
     
 */
-
 
 
 // 1️⃣ Derive sl_SI_UTF_8_locale class from locale base class (give it a name according to your locale)
@@ -49,7 +49,7 @@ class sl_SI_UTF_8_locale : public locale {
         }
 
         int strcoll (const char *s1, const char *s2) {
-            utf8_iterator it1 (s1); // 5️⃣ use utf8_iterators to iterate through strings of characters
+            utf8_iterator it1 (s1); // 4️⃣ use utf8_iterators to iterate through strings of characters
             utf8_iterator end1 = utf8_iterator (s1 + strlen (s1));
             utf8_iterator it2 (s2);
             utf8_iterator end2 = utf8_iterator (s2 + strlen (s2));
@@ -66,10 +66,10 @@ class sl_SI_UTF_8_locale : public locale {
             return 0; // s1 == s2
         }
 
-        // 6️⃣ override toupper and otlower functions that lc_ctype would use with your own
+        // 5️⃣ override toupper and tolower functions that lc_ctype would use with your own
         bool toupper (char* ps) {
             utf8_iterator end = utf8_iterator (ps + strlen (ps));
-            for (utf8_iterator it (ps) /* begin */; it < end; ++it) { // 7️⃣ use utf8_iterator to iterate through string of characters
+            for (utf8_iterator it (ps) /* begin */; it < end; ++it) { // 6️⃣ use utf8_iterator to iterate through string of characters
 
                 if ((unsigned char) *(it.get ()) < 0x80) { // 1 byte UTF-8 character = ASCII character
                     if (*(it.get ()) >= 'a' && *(it.get ()) <= 'z')
@@ -117,21 +117,21 @@ class sl_SI_UTF_8_locale : public locale {
             return true;
         }
 
-        // 8️⃣ override getDecimalSeparator and getThousandsSeparator functions that lc_numeric would use with your own
+        // 7️⃣ override getDecimalSeparator and getThousandsSeparator functions that lc_numeric would use with your own
         char getDecimalSeparator () const override { return ','; }
         char getThousandsSeparator () const override { return '.'; }
 
-        // 9️⃣ override getDecimalSeparator and getThousandsSeparator functions that lc_time would use with your own
+        // 8️⃣ override getTimeFormat function that lc_time would use with your own
         const char* getTimeFormat () const override { return "%d.%m.%Y %H:%M:%S"; }
 };
-// 🔟 Create a working instance of your class and insert it into supported locale list
+// 9️⃣ Create a working instance of your class and insert it into supported locale list
 bool __sl_SI_UTF_8_locale__ = addlocale (new sl_SI_UTF_8_locale);
 
 
 void setup () {
     cinit (); // three optional arguments: bool waitForSerial = false, unsigned int waitAfterSerial = 100 [ms], unsigned int serialSpeed = 115200 (9600 for AVR boards)
 
-    setlocale (lc_all, "sl_SI.UTF-8");
+    setlocale (lc_all, "sl_SI.UTF-8"); // 🔟 call setlocale to choose the locale you just have created
 
     // lc_ctype
 
