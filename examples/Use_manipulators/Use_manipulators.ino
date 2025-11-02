@@ -1,4 +1,4 @@
-#include <console.hpp>
+#include <ostream.hpp>
 
 
 void setup () {
