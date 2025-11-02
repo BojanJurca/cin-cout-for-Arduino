@@ -1,5 +1,6 @@
 #include <locale.hpp>
-#include <console.hpp>
+#include <istream.hpp>
+#include <ostream.hpp>
 
 
 void setup () {
