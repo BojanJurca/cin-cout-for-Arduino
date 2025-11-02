@@ -1,4 +1,6 @@
-#include <console.hpp>
+#include <istream.hpp>
+#include <ostream.hpp>
+
 
 void setup () {
     cinit (); // three optional arguments: bool waitForSerial = false, unsigned int waitAfterSerial = 100 [ms], unsigned int serialSpeed = 115200 (9600 for AVR boards)
