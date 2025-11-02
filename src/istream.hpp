@@ -1,5 +1,5 @@
 /*
- *  locale.hpp for Arduino
+ *  istream.hpp for Arduino
  *
  *  This file is part of cin, cout library for Arduino: https://github.com/BojanJurca/cin-cout-for-Arduino
  *
