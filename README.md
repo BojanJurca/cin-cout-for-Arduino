@@ -4,7 +4,7 @@ A lightweight, modular implementation of cin/cout-style streaming for Arduino, w
 The library provides standard C++ access to the serial console by implementing ostream and istream instances (cout and cin), along with convenient construction of a custom UTF-8 locale.
 
 
-## Repositiry status
+## Repository status
 
 [![GitHub stars](https://img.shields.io/github/stars/BojanJurca/cin-cout-for-Arduino?style=flat-square)](https://github.com/BojanJurca/cin-cout-for-Arduino/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/BojanJurca/cin-cout-for-Arduino?style=flat-square)](https://github.com/BojanJurca/cin-cout-for-Arduino/network/members)
