@@ -6,7 +6,7 @@ The library provides standard C++ access to the serial console by implementing o
 
 ## Repositiry status
 
-[![GitHub stars](https://img.shields.io/github/stars/BojanJurca/Ncin-cout-for-Arduino?style=flat-square)](https://github.com/BojanJurca/Ncin-cout-for-Arduino/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/BojanJurca/Ncin-cout-for-Arduino?style=flat-square)](https://github.com/BojanJurca/Ncin-cout-for-Arduino/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/BojanJurca/Ncin-cout-for-Arduino?style=flat-square)](https://github.com/BojanJurca/Ncin-cout-for-Arduino/issues)
-[![GitHub release downloads](https://img.shields.io/github/downloads/BojanJurca/Ncin-cout-for-Arduino/latest/total?style=flat-square)](https://github.com/BojanJurca/Ncin-cout-for-Arduino/releases/latest)
+[![GitHub stars](https://img.shields.io/github/stars/BojanJurca/cin-cout-for-Arduino?style=flat-square)](https://github.com/BojanJurca/cin-cout-for-Arduino/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/BojanJurca/cin-cout-for-Arduino?style=flat-square)](https://github.com/BojanJurca/cin-cout-for-Arduino/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/BojanJurca/cin-cout-for-Arduino?style=flat-square)](https://github.com/BojanJurca/cin-cout-for-Arduino/issues)
+[![GitHub release downloads](https://img.shields.io/github/downloads/BojanJurca/cin-cout-for-Arduino/latest/total?style=flat-square)](https://github.com/BojanJurca/cin-cout-for-Arduino/releases/latest)
