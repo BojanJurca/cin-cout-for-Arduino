@@ -1,4 +1,9 @@
 # cin, cout Arduino Library
-A lightweight, modular implementation of cin/cout-style streaming for Arduino, with UTF-8 support and customizable formatting.
 
-The library provides standard C++ access to the serial console by implementing ostream and istream instances (cout and cin), along with convenient construction of a custom UTF-8 locale.
+A minimal implementation of the `cin` and `cout` instances of the C++ `istream` and `ostream` classes, providing simple console-style input and output functionality for Arduino projects.
+
+If you are looking for a more complete Standard Template Library implementation, take a look at the Lightweight STL Arduino library:
+
+https://github.com/BojanJurca/Lightweight-Standard-Template-Library-STL-for-Arduino
+
+The `cin, cout Arduino Library` is fully included in that project as well, so it is not necessary to install both libraries.
